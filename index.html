@@ -3,37 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StayAvailable - Prevent Sleep Mode</title>
+    <meta name="description" content="A simple and effective tool to keep your device active. Use privately in incognito mode for added discretion.">
+    <title>Stay Available</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>StayAvailable</h1>
-            <p>Prevent your device from going into sleep mode.</p>
-        </header>
-
-        <main>
-            <section class="status-section">
-                <p id="status-message">Wake Lock Status:</p>
-                <p id="status">Inactive</p>
-                <button id="activateButton">Activate Wake Lock</button>
-                <button id="deactivateButton" style="display:none;">Deactivate Wake Lock</button>
-            </section>
-
-            <section class="donation">
-                <p>Support us by donating and keep this project alive:</p>
-                <a href="https://www.paypal.com/donate/?hosted_button_id=54P6XVSUC2RTG" target="_blank">
-                    <button class="donate-btn">Donate Now</button>
-                </a>
-            </section>
-        </main>
-
-        <footer>
-            <p>© 2024 StayAvailable. All Rights Reserved.</p>
-        </footer>
-    </div>
-
+    <header>
+        <h1>Stay Available</h1>
+        <p>Keep your device active when you need it most.</p>
+    </header>
+    <main>
+        <div class="status-section">
+            <p id="status-message">Current status: <span id="status">Inactive</span></p>
+            <button id="activate-button">Activate</button>
+            <button id="deactivate-button">Deactivate</button>
+        </div>
+        <div class="donation-section">
+            <p>Support us by donating and keep this project alive:</p>
+            <a href="https://www.paypal.com/donate/?hosted_button_id=54P6XVSUC2RTG" target="_blank">
+                <button class="donate-button">Donate Now</button>
+            </a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Stay Available. All rights reserved.</p>
+        <p class="privacy-tip">
+            For added privacy, consider using <strong>Incognito Mode</strong>. This ensures your visits are not saved in your browsing history.
+        </p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>

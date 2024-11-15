@@ -3,10 +3,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  /* Body styling */
-  body {
+}
+
+/* Body styling */
+body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(to right, #f8f9fa, #e9ecef);
     color: #212529;
@@ -16,55 +16,57 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-  }
-  
-  /* Header Styling */
-  header {
+    margin: 0;
+}
+
+/* Header Styling */
+header {
     text-align: center;
     margin-bottom: 20px;
-  }
-  
-  header h1 {
+}
+
+header h1 {
     font-size: 2.5em;
     color: #28a745;
     margin-bottom: 10px;
-  }
-  
-  header p {
+}
+
+header p {
     font-size: 1.2em;
     color: #6c757d;
-  }
-  
-  /* Main Content */
-  main {
+}
+
+/* Main Content */
+main {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     width: 100%;
     padding: 20px;
-  }
-  
-  .status-section {
+}
+
+.status-section {
     background: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 20px 30px;
     text-align: center;
     margin-bottom: 20px;
-  }
-  
-  #status-message {
+    width: 90%;
+    max-width: 600px;
+}
+
+#status-message {
     font-size: 1.5em;
     margin-bottom: 15px;
-  }
-  
-  #status {
+}
+
+#status {
     font-weight: bold;
     color: #dc3545;
-  }
-  
-  button {
+}
+
+button {
     background: #28a745;
     color: #ffffff;
     border: none;
@@ -74,36 +76,42 @@
     cursor: pointer;
     transition: background 0.3s ease;
     margin: 5px;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background: #218838;
-  }
-  
-  .donate-btn {
-    background-color: #007bff;
-    color: white;
-    padding: 12px 24px;
-    font-size: 1em;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-    margin-top: 20px;
-  }
-  
-  .donate-btn:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Donation Section Styling */
-  .donation {
+}
+
+.donation-section {
     text-align: center;
-    width: 100%;
-    padding: 20px 0;
-  }
-  
-  footer {
+    margin-top: 20px;
+}
+
+.donation-section p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.donate-button {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.donate-button:hover {
+    background-color: #e0a800;
+}
+
+/* Footer Styling */
+footer {
     margin-top: 20px;
     font-size: 0.9em;
     color: #6c757d;
-  }
-  
+    text-align: center;
+}
+
+.privacy-tip {
+    font-style: italic;
+    margin-top: 10px;
+    color: #495057;
+    font-size: 0.95em;
+}

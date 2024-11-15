@@ -1,44 +1,27 @@
+// JavaScript to toggle wake lock functionality
 let wakeLock = null;
 
-async function requestWakeLock() {
+// Activate button functionality
+const activateButton = document.getElementById("activate-button");
+const deactivateButton = document.getElementById("deactivate-button");
+const status = document.getElementById("status");
+
+activateButton.addEventListener("click", async () => {
     try {
-        // Request Wake Lock to prevent sleep mode
-        wakeLock = await navigator.wakeLock.request('screen');
-        console.log("Wake Lock is active");
-
-        // Update status on the webpage
-        document.getElementById('status').innerText = 'Active';
-
-        // Show deactivate button and hide activate button
-        document.getElementById('activateButton').style.display = 'none';
-        document.getElementById('deactivateButton').style.display = 'inline-block';
-
-        // Add event listener for when Wake Lock is released
-        wakeLock.addEventListener('release', () => {
-            console.log("Wake Lock has been released.");
-            document.getElementById('status').innerText = 'Inactive';
-            document.getElementById('activateButton').style.display = 'inline-block';
-            document.getElementById('deactivateButton').style.display = 'none';
-        });
+        wakeLock = await navigator.wakeLock.request("screen");
+        status.textContent = "Active";
+        status.style.color = "#28a745";
     } catch (err) {
-        console.error(`Error requesting Wake Lock: ${err.name}, ${err.message}`);
-        document.getElementById('status').innerText = 'Unable to activate Wake Lock.';
+        console.error(`Error activating wake lock: ${err.message}`);
     }
-}
-
-function releaseWakeLock() {
-    if (wakeLock !== null) {
-        wakeLock.release();
-        wakeLock = null;
-    }
-}
-
-// Activate Wake Lock when the activate button is clicked
-document.getElementById("activateButton").addEventListener("click", () => {
-    requestWakeLock();
 });
 
-// Deactivate Wake Lock when the deactivate button is clicked
-document.getElementById("deactivateButton").addEventListener("click", () => {
-    releaseWakeLock();
+// Deactivate button functionality
+deactivateButton.addEventListener("click", async () => {
+    if (wakeLock) {
+        wakeLock.release();
+        wakeLock = null;
+        status.textContent = "Inactive";
+        status.style.color = "#dc3545";
+    }
 });
